@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import TitleLogo from './components/TitleLogo';
 // We import all the components we need in our app
 import Navbar from "./components/navbar";
 //import CheckIn from "./components/checkin";

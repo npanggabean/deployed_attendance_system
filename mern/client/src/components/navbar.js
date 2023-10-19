@@ -1,7 +1,6 @@
 import React from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
-import TitleLogo from './TitleLogo';
 
 export default function Navbar() {
 
