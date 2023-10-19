@@ -1,0 +1,9 @@
+.large-cell, .btn.btn-link {
+    font-size: 24px;  /* or whatever font size you want */
+    padding: 10px;   /* add more padding */
+    text-align: justify; /* optional: to align text */
+}
+
+table {
+    table-layout: fixed;
+}

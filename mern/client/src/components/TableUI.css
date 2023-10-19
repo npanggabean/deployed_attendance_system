@@ -1,0 +1,135 @@
+/* --- FONT IMPORTS --- */
+@font-face {
+    font-family: 'SF FONT bold'; 
+    src: url('../fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+}
+
+@font-face {
+    font-family: 'SF FONT medium'; 
+    src: url('../fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+}
+
+/* --- GLOBAL STYLES --- */
+body {
+    background-color: #AFDCE7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+/* --- HEADINGS --- */
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'SF FONT bold'; 
+}
+
+/* --- SEARCH BAR --- */
+.searchBar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;
+    margin-top: 20px;
+}
+
+.searchBar {
+    width: 30%;
+    border-radius: 5px;
+    font-family: 'SF FONT medium';
+}
+
+/* --- TABLE STYLES --- */
+.nameTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #E5FBE7;    
+    border-radius: 5px;
+    font-family: 'SF FONT medium';     
+    border: 1px solid #ddd;
+}
+
+.nameTable th, .nameTable td {
+    border-right: 1px solid #ddd;
+    padding: 8px 16px; 
+}
+
+.nameTable th:last-child, .nameTable td:last-child {
+    border-right: none;
+}
+
+.nameTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.nameTable tr:last-child {
+    border-bottom: none;
+}
+
+.nameTable thead th {
+    border-bottom: 2px solid #ddd;
+}
+
+.tableLabel {
+    text-align: center;
+    font-family: 'SF FONT bold';
+}
+
+.nameTable thead,
+.nameTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;    
+}
+
+.nameTable tbody {
+    height: 200px;
+    overflow-y: auto;
+    display: block;
+}
+
+.fullname {
+    padding: 10px 15px;
+}
+
+table tbody tr {
+    height: 40px;    
+    display: flex;
+    align-items: center;
+}
+
+.selected-row {
+    background-color: #c9fbcd;
+}
+
+/* --- BUTTON STYLES --- */
+.centered-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+button {
+    background-color: #ECC182;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'SF FONT bold'; 
+}
+
+button:hover {
+    background-color: #e9b464;
+}
+
+.buttonName {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'SF FONT bold'; 
+}
