@@ -15,12 +15,13 @@ app.use(express.json());
 
 app.use("/record", records);
 
-// Since __dirname doesn't work in ES modules, use import.meta.url
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-// Adjust the path to point to the build directory
-const clientBuildPath = path.join(__dirname, '../client/build');
-console.log("Serving static files from: ", clientBuildPath);
+const clientBuildPath = path.join(process.cwd(), 'mern/client/build');
 
+app.use(express.static(clientBuildPath));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
+});
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(clientBuildPath));
