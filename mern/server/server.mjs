@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import './loadEnvironment.mjs';
 import records from './routes/record.mjs';
 
@@ -14,6 +15,9 @@ app.use(express.json());
 
 app.use("/record", records);
 
+// Define __dirname in ES module scope
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static(path.join(__dirname, '../../client/build')));
@@ -24,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// start the Express server
+// Start the Express server
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
 });
