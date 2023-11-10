@@ -15,10 +15,10 @@ app.use(express.json());
 
 app.use("/record", records);
 
-// Define __dirname in ES module scope
+// Since __dirname doesn't work in ES modules, use import.meta.url
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Adjust the path to point to the build directory
-const clientBuildPath = path.join(__dirname, '../../client/build');
+const clientBuildPath = path.join(__dirname, '../client/build');
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(clientBuildPath));
