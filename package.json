@@ -6,11 +6,10 @@
       "heroku-postbuild": "cd mern/client && npm install && npm run build"
     },
     "engines": {
-      "node": "16.x", // Specify the Node.js version you are using
-      "npm": "8.x"    // Specify the npm version you are using
+      "node": "16.x",
+      "npm": "8.x"
     },
     "dependencies": {
-      // No need to duplicate dependencies that are already in the server's package.json
     }
   }
   
