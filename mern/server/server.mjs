@@ -17,15 +17,13 @@ app.use("/record", records);
 
 // Define __dirname in ES module scope
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const clientBuildPath = path.join(__dirname, '../client/build');
+// Adjust the path to point to the build directory
+const clientBuildPath = path.join(__dirname, '../../client/build');
 
 if (process.env.NODE_ENV === 'production') {
-  // Set static folder
   app.use(express.static(clientBuildPath));
-
-  // Serve the React application's index.html file if no API route is hit
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(clientBuildPath, 'index.html'));
+    res.sendFile(path.join(clientBuildPath, 'index.html'));
   });
 }
 
